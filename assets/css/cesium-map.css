@@ -1,0 +1,176 @@
+html, body{
+    overflow: hidden;
+}
+
+#page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.site-main{
+    flex:1;
+    height: 0;
+    min-height: unset;
+    max-width: unset;
+    padding: 0;
+    margin: 0;
+}
+
+#cesiumContainer {
+    width:100%;
+    height:100%;
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+}
+
+.cesium-panel{
+    margin: 10px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, .5);
+    font-family: monospace;
+    color: #fff;
+    background: rgba(38, 38, 38, 0.95);
+    box-shadow: 0 3px 14px rgba(128, 128, 128, .5);
+}
+
+#coordinates{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#altitude{
+    display: none;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#toolbar{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+    z-index: 100;
+}
+#toolbar table{
+    margin: 0;
+    border: none;
+}
+#toolbar td{
+    padding: 4px;
+    border:none;
+}
+#toolbar input{
+    vertical-align: middle;
+    padding:0;
+}
+#toolbar label{
+    display: flex;
+    align-items: center;
+}
+
+#toolTip{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    min-width: 180px;
+    pointer-events: none;
+    z-index: 100;
+}
+.cesium-infoBox{
+    margin-right:10px;
+    border-radius: 7px;
+    border:1px solid #444;
+}
+.cesium-infoBox-description{
+    padding: 10px;
+    font-family: monospace;
+    width: 100%;
+    max-height: 600px;
+    word-break: break-all;
+    overflow-x: hidden;;
+    overflow-y: auto;
+}
+
+.cesium-infoBox-description::-webkit-scrollbar{
+    width: 12px;
+    background-color: black;
+}
+.cesium-infoBox-description:-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: black;
+}
+.cesium-infoBox-description::-webkit-scrollbar-thumb{
+    background-color:#4c4a4a;
+}
+.cesium-infoBox-description a:active, .cesium-infoBox-description a:hover,
+.cesium-infoBox-description a:link, .cesium-infoBox-description a:visited {
+    color: #95C837;
+}
+.cesium-infoBox-defaultTable{
+    margin:0;
+    line-height: 1.6;
+    border-bottom: none;
+    font-family: monospace;
+}
+.cesium-infoBox-defaultTable th, .cesium-infoBox-defaultTable td{
+    border: 1px solid black;
+    text-align: center;
+}
+.cesium-infoBox-defaultTable td:first-child{
+    width: 40%;
+}
+.cesium-infoBox-defaultTable td:last-child{
+    width: 60%;
+}
+
+.cesium-infoBox-defaultTable .social-icons .fa{
+    padding: 5px;
+    font-size: 16px;
+    width: 28px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color:white;
+    border-radius: 50%;
+}
+.cesium-infoBox-defaultTable .social-icons .fa:hover{
+    opacity: 0.7;
+}
+.cesium-infoBox-defaultTable .social-icons .fa-facebook {background: #3B5998;}
+.cesium-infoBox-defaultTable .social-icons .fa-twitter {background: #55ACEE;}
+.cesium-infoBox-defaultTable .social-icons .fa-google-plus {background: #dd4b39;}
+.cesium-infoBox-defaultTable .social-icons .fa-linkedin {background: #007bb5;}
+.cesium-infoBox-defaultTable .social-icons .fa-youtube { background: #bb0000;}
+.cesium-infoBox-defaultTable .social-icons .fa-instagram {background: #125688;}
+.cesium-infoBox-defaultTable .social-icons .fa-skype {background: #00aff0;}
+
+.form-table{
+    width:100%;
+    font-family:monospace;
+    color:#edffff;
+    line-height: normal;
+    border:none;
+}
+.form-table td{
+    padding: 3px;
+    border:none;
+}
+
+.cesium-viewer-geocoderContainer .cesium-geocoder-input-wide,
+.cesium-viewer-geocoderContainer .cesium-geocoder-input:focus,
+.cesium-viewer-geocoderContainer:hover .cesium-geocoder-input{
+  width: 300px;
+}

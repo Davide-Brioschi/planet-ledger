@@ -1,0 +1,24 @@
+
+.site-main{
+    display:flex;
+    max-width: unset;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 4vmax;
+    color: #dedede;
+    font-style: italic;
+    text-align: center;
+    /*text-shadow: 1px 1px 2px black, 0 0 16px white, 0 0 5px darkblue;*/
+    background-image:url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.site-main p{
+    margin-bottom: 200px;
+}
