@@ -790,6 +790,63 @@ function get_surface_area(lng1, lng2, lat1, lat2){
     
  }	
 
+ /*
+ function compress(imageFile, newFileName) {
+	return new Promise(resolve => {
+		const reader = new FileReader();
+		reader.readAsDataURL(imageFile);
+		reader.onload = event => {
+			const img = new Image();
+			img.src = event.target.result;
+			img.onload = () => {
+					const canvas = document.createElement('canvas');
+					const ctx = canvas.getContext('2d');
+					const MAX_WIDTH = 500;
+					const MAX_HEIGHT = 500;
+                    var top = 0, left = 0;
+					var width = img.width;
+					var height = img.height;
+					if (width > height) {
+						if (width > MAX_WIDTH) {
+						  canvas.width = MAX_WIDTH;
+					      canvas.height = MAX_HEIGHT;
+						  height *= MAX_WIDTH / width;
+						  width = MAX_WIDTH;
+						  top = (MAX_HEIGHT - height)/2;
+						}else{
+						  canvas.width = width;
+						  canvas.height = width;
+						  top = (width - height)/2;
+						}
+					}else{
+						if (height > MAX_HEIGHT) {
+						  canvas.width = MAX_WIDTH;
+						  canvas.height = MAX_HEIGHT;	
+						  width *= MAX_HEIGHT / height;
+						  height = MAX_HEIGHT;
+						  left = (MAX_WIDTH - width)/2;
+						}else{
+							canvas.width = height;
+						    canvas.height = height;
+						    left = (height - width)/2;
+						}
+					}
+					ctx.drawImage(img, left, top, width, height);
+					ctx.canvas.toBlob((blob) => {
+						const file = new File([blob], newFileName, {
+							type: 'image/png',
+							lastModified: Date.now()
+						});
+						resolve(file);
+					}, 'image/png', 1);
+				},
+			reader.onerror = error => console.log(error);
+		};
+	});
+    
+ }	
+*/
+
  function docId(id){
     return document.getElementById(id);
  }
